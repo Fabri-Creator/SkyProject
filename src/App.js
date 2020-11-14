@@ -1,4 +1,9 @@
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.scss";
+import Home from "./pages/Home";
+import UserLogin from "./pages/UserLogin";
+import Admin from "./pages/Admin";
+import NewProduct from "./pages/NewProduct";
 
 function App() {
   return (
@@ -6,11 +11,17 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Products />
+            <Home />
           </Route>
-          {/* <Route exact path="/products">
-            <Products />
-          </Route> */}
+          <Route exact path="/user/login">
+            <UserLogin />
+          </Route>
+          <Route exact path="/admin/login">
+            <Admin />
+          </Route>
+          <Route exact path="/admin/new-product">
+            <NewProduct />
+          </Route>
         </Switch>
       </Router>
     </>
