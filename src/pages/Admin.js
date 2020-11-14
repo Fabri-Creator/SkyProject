@@ -1,10 +1,12 @@
+import SecondaryLayout from "../components/Layout/SecondaryLayout/SecondaryLayout";
+import LoginForm from "../components/LoginForm";
 import "./pages.scss";
 
 const Admin = () => {
   return (
-    <div className="admin-container">
-      <h1>Hola admin</h1>
-    </div>
+    <SecondaryLayout>
+      <LoginForm />
+    </SecondaryLayout>
   );
 };
 

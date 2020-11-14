@@ -1,0 +1,40 @@
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.7rem;
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+  color: rgb(204, 204, 204);
+}
+.sex-container {
+  width: 15%;
+  height: auto;
+  display: flex;
+  margin-left: 0.5rem;
+  justify-content: space-between;
+  .sex-container-text {
+    padding: 0.3rem;
+  }
+}
+.user-shop-container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  right: 1rem;
+  width: 10%;
+}
+.far {
+  padding: 0.4rem;
+  font-size: 1.3rem;
+}
+.fas {
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  color: blanchedalmond;
+}
+#shop-icon {
+  color: blanchedalmond;
+}

@@ -1,0 +1,23 @@
+.second-layout-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.goBack {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.fas {
+  font-size: 1.3rem;
+  color: darkgray;
+}
+.fa-toolbox {
+  font-size: 1rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 1rem;
+  color: darkgray;
+}

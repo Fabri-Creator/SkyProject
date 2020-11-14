@@ -1,0 +1,19 @@
+.Signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 50%;
+  padding: 0.5rem;
+  .Signin-label {
+    font-weight: 300;
+  }
+  input {
+    margin: 1rem 0rem;
+    border: none;
+    border-bottom: 1px solid darkgrey;
+  }
+  .button-submit {
+    color: black;
+  }
+}

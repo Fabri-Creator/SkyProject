@@ -1,10 +1,11 @@
+import MainLayout from "../components/Layout/MainLayout/MainLayout";
 import "./pages.scss";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <h1>Hola home</h1>
-    </div>
+    <MainLayout>
+      <div className="home-container"></div>
+    </MainLayout>
   );
 };
 
