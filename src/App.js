@@ -4,6 +4,10 @@ import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
 import Admin from "./pages/Admin";
 import NewProduct from "./pages/NewProduct";
+import firebase from "firebase/app";
+
+import firebaseConfig from "./Configuracion/config";
+firebase.initializeApp(firebaseConfig);
 
 function App() {
   return (
