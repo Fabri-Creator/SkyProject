@@ -2,8 +2,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
-import Admin from "./pages/Admin";
+import AdminLogin from "./pages/AdminLogin";
 import NewProduct from "./pages/NewProduct";
+import UserSucces from "./pages/UserSucces";
 import firebase from "firebase/app";
 
 import firebaseConfig from "./Configuracion/config";
@@ -20,8 +21,11 @@ function App() {
           <Route exact path="/user/login">
             <UserLogin />
           </Route>
+          <Route exact path="/user/login/succes">
+            <UserSucces />
+          </Route>
           <Route exact path="/admin/login">
-            <Admin />
+            <AdminLogin />
           </Route>
           <Route exact path="/admin/new-product">
             <NewProduct />

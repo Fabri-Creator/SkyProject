@@ -47,7 +47,7 @@ const SignupForm = () => {
 
     const { success, error } = await userSignup(email, password, name);
     if (success) {
-      history.push("/admin/new-product");
+      history.push("/user/login/succes");
     } else {
       // setSignupError(error);
     }

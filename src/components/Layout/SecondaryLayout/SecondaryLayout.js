@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
+
 import "./SecondaryLayout.scss";
+
 const SecondaryLayout = ({ children }) => {
   return (
     <div className="second-layout-container">

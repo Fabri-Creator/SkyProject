@@ -2,7 +2,7 @@ import SecondaryLayout from "../components/Layout/SecondaryLayout/SecondaryLayou
 import LoginForm from "../components/LoginForm";
 import "./pages.scss";
 
-const Admin = () => {
+const AdminLogin = () => {
   return (
     <SecondaryLayout>
       <LoginForm />
@@ -10,4 +10,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default AdminLogin;

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+// import { useSelector } from "react-redux";
+
 import "./Header.scss";
+
 const Header = () => {
+  // const user = useSelector((state) => state.user);
   return (
     <div className="main-header">
       <div className="sex-container">
@@ -22,4 +26,5 @@ const Header = () => {
     </div>
   );
 };
+
 export default Header;
