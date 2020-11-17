@@ -49,7 +49,7 @@ const SignupForm = () => {
     if (success) {
       history.push("/user/login/succes");
     } else {
-      // setSignupError(error);
+      console.log("Singuo ERROR =>", error);
     }
   };
 
@@ -65,37 +65,37 @@ const SignupForm = () => {
   return (
     <div className="Signin-container">
       <form>
-        <label className="Signin-label">Signin</label>
+        <label className="Signin-label">Sign up</label>
         <div className="signin-field-container">
           <input
-            inputName="name"
+            name="name"
             // hasError={formError.email}
             value={name}
             onChange={({ target: { value } }) => setName(value)}
             // onChange={handleInputChange}
-            placeholderError="GENERIC_Name"
+            // placeholderError="GENERIC_Name"
             placeholder="Name"
           />
         </div>
         <div className="Signin-field-container">
           <input
-            inputName="email"
+            name="email"
             // hasError={formError.email}
             value={email}
             onChange={({ target: { value } }) => setEmail(value)}
             // onChange={handleInputChange}
-            placeholderError="GENERIC_EMAIL"
+            // placeholderError="GENERIC_EMAIL"
             placeholder="Email"
           />
         </div>
         <div className="Signin-field-container">
           <input
-            inputName="password"
+            name="password"
             type="password"
             // hasError={formError.password}
             value={password}
             onChange={({ target: { value } }) => setPassword(value)}
-            placeholderError="GENERIC_PASSWORD"
+            // placeholderError="GENERIC_PASSWORD"
             placeholder="Password"
           />
         </div>

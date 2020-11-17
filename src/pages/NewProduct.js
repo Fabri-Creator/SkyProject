@@ -1,11 +1,8 @@
 import "./pages.scss";
+import SecondaryLayout from "../components/Layout/SecondaryLayout/SecondaryLayout";
 
 const NewProduct = () => {
-  return (
-    <div className="new-product-container">
-      <h1>Hola new product</h1>
-    </div>
-  );
+  return <SecondaryLayout>New Product</SecondaryLayout>;
 };
 
 export default NewProduct;

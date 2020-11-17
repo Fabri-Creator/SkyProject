@@ -1,12 +1,11 @@
 import { SET_USER_PROFILE } from "../actions/userActions";
 
-const defaultProfile = { email: "", userName: "" };
+const defaultProfile = "";
 
 function userReducer(state = defaultProfile, action) {
   switch (action.type) {
     case SET_USER_PROFILE: {
-      const userName = action.payload.split("@")[0];
-      return { email: action.payload, userName };
+      return action.payload;
     }
     default: {
       return state;
@@ -15,3 +14,5 @@ function userReducer(state = defaultProfile, action) {
 }
 
 export default userReducer;
+
+// const userName = action.payload.split("@")[0];

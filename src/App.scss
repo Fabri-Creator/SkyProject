@@ -5,10 +5,12 @@
   font-size: 14 px;
   font-family: "Montserrat", sans-serif;
 }
+input:focus {
+  outline: none;
+}
 button {
   border: 1ps solid black;
 }
 a {
-  color: blanchedalmond;
   text-decoration: none;
 }

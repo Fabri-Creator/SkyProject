@@ -1,13 +1,12 @@
 import React, { useState } from "react";
+import "./LoginForm.scss";
 import { userLogin } from "../../logic/user";
 
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { setUserProfile } from "../../redux/actions/userActions";
-import "./LoginForm.scss";
+import { useHistory } from "react-router";
 
 const LoginForm = () => {
-  const dispatch = useDispatch();
+  let history = useHistory();
   const user = useSelector((state) => state.user);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,12 +15,11 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { success, error } = await userLogin(email, password);
-    dispatch(setUserProfile(email));
     if (success) {
-      console.log(user);
-      // history.push("/user/login/succes")
-      //  si user.admin = true go new proyect
-      //  si user.admin = false go welcome;
+      if (user && user.admin === undefined) {
+        return history.push("/user/login/succes");
+      }
+      setLoginError("");
     } else {
       setLoginError(error);
     }
@@ -33,22 +31,22 @@ const LoginForm = () => {
         <label className="login-label">Login</label>
         <div className="login-field-container">
           <input
-            inputName="email"
+            name="email"
             // hasError={formError.email}
             value={email}
             onChange={({ target: { value } }) => setEmail(value)}
-            placeholderError="GENERIC_EMAIL"
+            // placeholderError="GENERIC_EMAIL"
             placeholder="Email"
           />
         </div>
         <div className="login-field-container">
           <input
-            inputName="password"
+            name="password"
             type="password"
             // hasError={formError.password}
             value={password}
             onChange={({ target: { value } }) => setPassword(value)}
-            placeholderError="GENERIC_PASSWORD"
+            // placeholderError="GENERIC_PASSWORD"
             placeholder="Password"
           />
         </div>

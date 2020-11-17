@@ -1,23 +1,49 @@
 .second-layout-container {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
 }
-.goBack {
+.header-section {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
-}
-.fas {
-  font-size: 1.3rem;
-  color: darkgray;
-}
-.fa-toolbox {
-  font-size: 1rem;
-  position: absolute;
-  right: 0.5rem;
-  top: 1rem;
-  color: darkgray;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .header-section-left {
+    padding: 0.5rem 1rem;
+  }
+  .header-section-right {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  .fas {
+    font-size: 1.3rem;
+    color: darkgray;
+  }
+  .fas:hover {
+    font-size: 1.4rem;
+    color: black;
+  }
+  .fa-toolbox {
+    font-size: 1.3rem;
+    color: darkgray;
+  }
+  .fa-toolbox:hover {
+    color: black;
+  }
+  .header-section-right-user {
+    align-self: center;
+    padding: 0.5rem 1rem;
+  }
+  .header-section-right-user-logout {
+    align-self: center;
+    padding: 0.5rem 1rem;
+  }
+  .header-section-right-user-logout:hover {
+    font-weight: 700;
+  }
 }
