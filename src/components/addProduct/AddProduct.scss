@@ -1,0 +1,35 @@
+.add-form-input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-div-container {
+  display: flex;
+  flex-direction: row;
+}
+.input-class {
+  margin: 0.5rem;
+  border: none;
+  border-bottom: 1px solid darkgrey;
+}
+.textarea-div-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+  label {
+    align-self: center;
+  }
+}
+.textarea-class {
+  margin: 0.5rem;
+  border-bottom: 1px solid darkgrey;
+}
+.checkbox-class {
+  margin: 0.5rem;
+  border: none;
+  border-bottom: 1px solid darkgrey;
+}
+span {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}

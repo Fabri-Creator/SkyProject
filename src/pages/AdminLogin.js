@@ -1,9 +1,13 @@
+import AddProduct from "../components/addProduct/AddProduct";
 import SecondaryLayout from "../components/Layout/SecondaryLayout/SecondaryLayout";
-import LoginForm from "../components/LoginForm";
 import "./pages.scss";
 
 const AdminLogin = () => {
-  return <SecondaryLayout>New admin task</SecondaryLayout>;
+  return (
+    <SecondaryLayout>
+      <AddProduct></AddProduct>
+    </SecondaryLayout>
+  );
 };
 
 export default AdminLogin;
