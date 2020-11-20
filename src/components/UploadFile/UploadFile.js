@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { uploadFile } from "../../services/storage";
 import "./UploadFile.scss";
 
-const UploadFile = ({ folder, onFileUpload, placeholder }) => {
+const UploadFile = ({ folder, onFileUpload }) => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [uploadURL, setUploadURL] = useState([]);
+
+  useEffect(() => {
+    onFileUpload(uploadURL);
+  }, [uploadURL]);
 
   const handlerFile = (event) => {
     const file = event.target.files[0];
@@ -15,24 +19,31 @@ const UploadFile = ({ folder, onFileUpload, placeholder }) => {
         }
         if (result.status === "success") {
           setUploadProgress(result.progress);
-          setUploadURL(result.url);
-          // onFileUpload(result.url);
+          setUploadURL([...uploadURL, result.url]);
         }
       });
     }
+    console.log("uploadURL => ", uploadURL);
   };
 
   return (
     <div className="add-file-container">
       <input
         onChange={handlerFile}
-        className="input-class"
+        className="input-class-file"
         name="productPicture"
-        placeholder={placeholder}
+        placeholder="Seleccionar archivo"
         type="file"
       />
-      <span>Progress: {uploadProgress}</span>
-      {uploadURL && <img className="img-upload" src={uploadURL} />}
+      <div className="file-image-container">
+        {uploadURL &&
+          uploadURL.map((pic, i) => (
+            <div key={pic}>
+              <img alt={`product-img ${i}`} className="img-upload" src={pic} />
+            </div>
+          ))}
+        <span>Progress: {uploadProgress}</span>
+      </div>
     </div>
   );
 };

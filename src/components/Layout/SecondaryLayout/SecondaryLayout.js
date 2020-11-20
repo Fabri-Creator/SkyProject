@@ -7,7 +7,6 @@ import "./SecondaryLayout.scss";
 const SecondaryLayout = ({ children }) => {
   let history = useHistory();
   const user = useSelector((state) => state.user);
-  console.log("SecondLayout =>", user);
 
   const handlerLogout = () => {
     userLogout();
@@ -18,7 +17,7 @@ const SecondaryLayout = ({ children }) => {
       <div className="header-section">
         <div className="header-section-left">
           <div
-            onClick={() => history.goBack()}
+            onClick={() => history.push("/")}
             className="fas fa-chevron-circle-left"
           ></div>
         </div>

@@ -24,6 +24,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     registerAuthStateChangeHandler(async (user) => {
+      console.log(user);
       if (user) {
         const useProfile = await getUserProfileById(user.uid);
         dispatch(setUserProfile(useProfile));
@@ -43,9 +44,6 @@ function App() {
           </Route>
           <Route exact path="/user/login">
             <UserLogin />
-          </Route>
-          <Route exact path="/user/login/succes">
-            <UserSucces />
           </Route>
           <Route exact path="/admin/login">
             <AdminLogin />

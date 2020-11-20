@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./LoginForm.scss";
 import { userLogin } from "../../logic/user";
 
@@ -12,13 +12,17 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
 
+  useEffect(() => {
+    console.log("user from login =>", user);
+    if (user && user.admin === undefined) {
+      return history.push("/");
+    }
+  }, [user]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { success, error } = await userLogin(email, password);
     if (success) {
-      if (user && user.admin === undefined) {
-        return history.push("/user/login/succes");
-      }
       setLoginError("");
     } else {
       setLoginError(error);
