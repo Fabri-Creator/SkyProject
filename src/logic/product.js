@@ -1,4 +1,8 @@
-import { addObject } from "../services/data";
+import {
+  addObject,
+  getAllDocuments,
+  setupCollectionObserver,
+} from "../services/data";
 
 const PRODUCT_COLLECTION = "product";
 
@@ -29,4 +33,12 @@ export async function addProductForm(
     ...productToSave,
     id: productId,
   };
+}
+
+export async function getProductRealTime() {
+  const result = await getAllDocuments(PRODUCT_COLLECTION);
+  return result;
+}
+export function productCollectionObserver(callback) {
+  return setupCollectionObserver(PRODUCT_COLLECTION, callback);
 }

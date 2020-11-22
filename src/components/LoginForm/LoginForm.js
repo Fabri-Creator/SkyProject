@@ -13,7 +13,6 @@ const LoginForm = () => {
   const [loginError, setLoginError] = useState("");
 
   useEffect(() => {
-    console.log("user from login =>", user);
     if (user && user.admin === undefined) {
       return history.push("/");
     }

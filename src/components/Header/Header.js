@@ -6,8 +6,7 @@ import "./Header.scss";
 
 const Header = () => {
   const user = useSelector((state) => state.user);
-  console.log("User header =>", user);
-
+  // console.log("User header =>", user);
   const handlerLogout = () => {
     userLogout();
   };

@@ -17,32 +17,29 @@
     display: flex;
     justify-content: center;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
   }
   .fas {
     font-size: 1.3rem;
     color: darkgray;
+    align-self: center;
+    padding: 0.8rem 0.8rem;
   }
+
   .fas:hover {
-    font-size: 1.4rem;
     color: black;
-  }
-  .fa-toolbox {
-    font-size: 1.3rem;
-    color: darkgray;
-  }
-  .fa-toolbox:hover {
-    color: black;
+    border-bottom: 1px solid black;
   }
   .header-section-right-user {
-    align-self: center;
-    padding: 0.5rem 1rem;
+    align-self: flex-end;
+    padding: 0.8rem 0.8rem;
+    font-size: 0.9rem;
   }
   .header-section-right-user-logout {
-    align-self: center;
-    padding: 0.5rem 1rem;
+    align-self: flex-end;
+    padding: 0.8rem 0.8rem;
+    font-size: 0.9rem;
   }
   .header-section-right-user-logout:hover {
-    font-weight: 700;
+    border-bottom: 1px solid black;
   }
 }

@@ -1,7 +1,15 @@
 .add-form-container {
+  height: auto;
+  padding-bottom: 2rem;
   margin-top: 5rem;
   display: flex;
   justify-content: center;
+  width: 30%;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .add-form-input-container {
   height: 100%;
@@ -9,9 +17,19 @@
 }
 .input-div-container {
   display: flex;
-  flex-direction: row;
+
+  justify-content: center;
+  width: 80%;
+  textarea {
+    width: 100%;
+  }
 }
 .input-class {
+  margin: 0.5rem;
+  border: none;
+  border-bottom: 1px solid darkgrey;
+}
+.price-class {
   margin: 0.5rem;
   border: none;
   border-bottom: 1px solid darkgrey;
@@ -19,21 +37,32 @@
 .sizes-div-container {
   padding: 0.5rem;
   position: relative;
-  width: 45%;
+  height: auto;
+  width: 60%;
   display: flex;
-  p {
-    font-size: 0.8rem;
-    position: absolute;
-    top: 0px;
+  justify-content: center;
+  .sizes-input-div-container {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   label {
     font-size: 0.8rem;
   }
   input {
     border: 1px solid darkgrey;
-    margin-top: 1.5rem;
-    width: 30%;
+    width: 2.5rem;
   }
+  p {
+    position: absolute;
+    top: 0rem;
+    font-size: 0.9rem;
+  }
+}
+.file-div-container {
+  display: flex;
+  justify-content: center;
 }
 .input-class-file {
   border: none;
@@ -42,11 +71,11 @@
 }
 .file-image-container {
   display: flex;
+  justify-content: center;
   flex: wrap;
-  flex-direction: column;
   align-items: center;
 }
-.textarea-div-container {
+.category-div-container {
   display: flex;
   flex-direction: row;
   font-size: 0.8rem;
@@ -64,7 +93,18 @@
   border: none;
   border-bottom: 1px solid darkgrey;
 }
-span {
+.progress-sign {
   font-size: 0.8rem;
   margin: 0.5rem;
+}
+.submit-button {
+  background-color: black;
+  color: white;
+  border-radius: none;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  width: 60%;
+}
+.img-cintainer-product {
+  padding: 0.5rem;
 }

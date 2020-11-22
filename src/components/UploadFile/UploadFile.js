@@ -32,17 +32,18 @@ const UploadFile = ({ folder, onFileUpload }) => {
         onChange={handlerFile}
         className="input-class-file"
         name="productPicture"
-        placeholder="Seleccionar archivo"
         type="file"
       />
       <div className="file-image-container">
         {uploadURL &&
           uploadURL.map((pic, i) => (
-            <div key={pic}>
+            <div className="img-cintainer-product" key={pic}>
               <img alt={`product-img ${i}`} className="img-upload" src={pic} />
             </div>
           ))}
-        <span>Progress: {uploadProgress}</span>
+      </div>
+      <div>
+        <span className="progress-sign">Progress: {uploadProgress}</span>
       </div>
     </div>
   );
