@@ -15,7 +15,7 @@ function userReducer(state = defaultProfile, action) {
       return null;
     }
     default: {
-      return defaultProfile;
+      return state;
     }
   }
 }

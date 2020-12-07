@@ -1,8 +1,19 @@
 import "./ProductList.scss";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { deleteProduct } from "../../logic/product";
+import { useSelector, useDispatch } from "react-redux";
+import { setProductCollection } from "../../redux/actions/productAction";
 
 const ProductList = () => {
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.product);
+
+  const handlerRemoveProduct = async (obj) => {
+    const { id } = obj;
+    debugger;
+    const newCollection = await deleteProduct(id, obj);
+    dispatch(setProductCollection(newCollection));
+  };
 
   return (
     <div className="product-list-container">
@@ -11,7 +22,12 @@ const ProductList = () => {
           <div key={i} className="product-item">
             <div className="product-hover">
               <h3 className="product-hover-action">Edit</h3>
-              <h3 className="product-hover-action">Delete</h3>
+              <h3
+                className="product-hover-action"
+                onClick={() => handlerRemoveProduct(p)}
+              >
+                Delete
+              </h3>
             </div>
             <div className="p-img">
               <img className="p-img-tag" src={p.Images[0]} alt={i}></img>
@@ -21,8 +37,10 @@ const ProductList = () => {
               <p className="p-ref">{`Ref: ${p.Ref}`}</p>
               <div className="p-cat-container">
                 {p.Categories &&
-                  p.Categories.map((cate, i) => (
-                    <p key={i + cate} className="p-Category">{`- ${cate} `}</p>
+                  Object.keys(p.Categories).map((cate, i) => (
+                    <p key={i + cate} className="p-Category">{`- ${[
+                      cate,
+                    ]} `}</p>
                   ))}
               </div>
             </div>

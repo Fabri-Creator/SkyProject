@@ -1,29 +1,29 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import firebase from "firebase/app";
 
 import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
 import AdminLogin from "./pages/AdminLogin";
-import NewProduct from "./pages/NewProduct";
+import NewOrder from "./pages/NewOrder";
+import InfoPurchase from "./pages/InfoPurchase";
 
 import "./App.scss";
-import firebaseConfig from "./Configuracion/config";
+import firebaseConfig from "./Configuration/config";
 import {
   getUserProfileById,
   registerAuthStateChangeHandler,
 } from "./logic/user";
-import { getProductRealTime, productCollectionObserver } from "./logic/product";
+
 import { setUserProfile, unsetUserProfile } from "./redux/actions/userActions";
-import { setProductCollection } from "./redux/actions/productAction";
 
 firebase.initializeApp(firebaseConfig);
 
 function App() {
+  const state = useSelector((state) => state);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     registerAuthStateChangeHandler(async (user) => {
       if (user) {
@@ -35,18 +35,6 @@ function App() {
       setLoading(false);
     });
   }, []);
-
-  useEffect(() => {
-    getProductRealTime().then((rs) => {
-      dispatch(setProductCollection(rs));
-    });
-  }, []);
-
-  // useEffect(() => {
-  //   productCollectionObserver((updatedCollection) =>
-  //     dispatch(setProductCollection(updatedCollection))
-  //   );
-  // }, []);
 
   if (loading) return <div>No profile</div>;
   return (
@@ -62,8 +50,11 @@ function App() {
           <Route exact path="/admin/login">
             <AdminLogin />
           </Route>
-          <Route exact path="/admin/new-product">
-            <NewProduct />
+          <Route exact path="/order">
+            <NewOrder />
+          </Route>
+          <Route exact path="/order/purchase">
+            <InfoPurchase />
           </Route>
         </Switch>
       </Router>

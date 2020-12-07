@@ -97,6 +97,14 @@ const AddProduct = () => {
             value="Hombre"
             ref={register}
           />
+          <label>Novedades</label>
+          <input
+            type="checkbox"
+            className="checkbox-class"
+            name="productCategory"
+            value="Novedades"
+            ref={register}
+          />
         </div>
         <div className="sizes-div-container">
           <div className="sizes-input-div-container">
