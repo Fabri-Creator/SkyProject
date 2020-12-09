@@ -12,7 +12,6 @@ const PurchaseForm = () => {
 
   const onSubmit = async (data) => {
     setOwner(data.userName);
-    console.log(data.userName);
     setSucces(true);
     reset();
   };
@@ -28,7 +27,7 @@ const PurchaseForm = () => {
           placeholder="Nombre"
           ref={register({ required: true, maxLength: 50, minLength: 7 })}
         />
-        {errors.userName && <span>Name is required, 7 to 50 characters</span>}
+        {errors.userName && <span>Nombre con más de 7 caracteres</span>}
         <input
           className="input-class"
           name="location"
@@ -40,22 +39,21 @@ const PurchaseForm = () => {
           placeholder="Provincia"
         />
         <input className="input-class" name="ciudad" placeholder="Ciudad" />
-        {errors.userName && <span>Name is required, 7 to 50 characters</span>}
         <input
           className="input-class"
           name="tarjeta"
           placeholder="Número de tarjeta"
           ref={register({ required: true, maxLength: 16, minLength: 16 })}
         />
-        {errors.tarjeta && <span>Name is required, 7 to 50 characters</span>}
+        {errors.tarjeta && <span>Número erroneo</span>}
         <input
           className="input-class"
           name="codigo"
           placeholder="Código de tarjeta"
           ref={register({ required: true, maxLength: 3, minLength: 3 })}
         />
-        {errors.codigo && <span>Name is required, 7 to 50 characters</span>}
-        <div className="final-price">{`${totalPrice} EUR`}</div>
+        {errors.codigo && <span>Código erroneo</span>}
+        <div className="final-price">{`${totalPrice.toFixed(2)}  EUR`}</div>
         <button className="final-purchase">Comprar</button>
         {succes && (
           <>

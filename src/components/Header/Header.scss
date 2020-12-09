@@ -107,6 +107,9 @@
     justify-content: center;
     align-items: center;
     font-size: 0.9rem;
+    top: 90%;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
     height: 4rem;
     width: 6rem;
     background-color: black;
@@ -139,7 +142,6 @@
     background-color: white;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   }
-
   .shop-header p,
   .button-shop {
     display: block;

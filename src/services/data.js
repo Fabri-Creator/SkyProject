@@ -104,8 +104,6 @@ export function getAllDocuments(collection) {
 
 export async function getFilteredProducts(PRODUCT_COLLECTION, filter) {
   const filteredProducts = getCollection(PRODUCT_COLLECTION);
-  // console.log("Dataaaa =>", filter);
-  // debugger;
   const db = filteredProducts
     .where(`${filter.Cat}.${filter.One}`, filter.Condition, true)
     .where(`${filter.Cat}.${filter.Two}`, filter.Condition, true);
@@ -118,6 +116,5 @@ export async function getFilteredProducts(PRODUCT_COLLECTION, filter) {
   } else {
     console.log("filtered product error");
   }
-  console.log("Filtered data =>", items);
   return items;
 }

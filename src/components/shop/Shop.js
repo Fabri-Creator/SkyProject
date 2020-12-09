@@ -11,6 +11,7 @@ import {
   getDiscount,
 } from "../../logic/order";
 import {
+  setOrderTotal,
   setEditedOrder,
   setSubstractOrder,
 } from "../../redux/actions/orderAction";
@@ -21,44 +22,51 @@ const Shop = () => {
   const order = useSelector((state) => state.order);
   const [finalPrice, setFinalPrice] = useState(0);
   const [error, setError] = useState("");
-  const { register, handleSubmit, reset, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
   useEffect(() => {
     setFinalPrice(totalPrice(order));
-    dispatch(setPrice(finalPrice));
+    if (finalPrice !== undefined) {
+      dispatch(setPrice(finalPrice));
+    }
   }, [order]);
 
   useEffect(() => {
-    dispatch(setPrice(finalPrice));
+    if (finalPrice !== undefined) {
+      dispatch(setPrice(finalPrice));
+    }
   }, [finalPrice]);
 
   const handlerAddProduct = (order, product) => {
     const customOrder = addProductOrder(order, product);
-    console.log("add ", customOrder);
     dispatch(setEditedOrder(customOrder));
   };
 
   const handlerSubstractProduct = (order, product) => {
     const customOrder = substractItem(order, product);
-    console.log("Substract => ", customOrder);
     dispatch(setSubstractOrder(customOrder));
   };
 
   const handlerDeleteProduct = (order, product) => {
     const customOrder = removeItem(order, product);
-    console.log("remove => ", customOrder);
     dispatch(setSubstractOrder(customOrder));
   };
+
   const onSubmit = async (data) => {
     const code = data.code;
-    console.log(code);
     if (code === "SKY2020") {
       const total = getDiscount(code);
-      const final = setFinalPrice(finalPrice * total);
+      const final = finalPrice * total;
+      setFinalPrice(final);
+      dispatch(setPrice(finalPrice));
       setError("");
     } else {
       setError("Código no válido");
     }
+  };
+
+  const handlerResetOrder = () => {
+    dispatch(setOrderTotal([]));
   };
 
   return (
@@ -119,10 +127,24 @@ const Shop = () => {
             </div>
           </div>
         ))}
+      <div className="reset-order-container">
+        <button
+          onClick={() => {
+            handlerResetOrder();
+          }}
+          className="reset-order"
+        >
+          Vaciar carrito
+        </button>
+      </div>
       <div className="final-price-container">
         <div className="final-price">
           Total pedido:
-          <h4>{finalPrice} EUR</h4>
+          <h4>
+            {finalPrice !== undefined
+              ? `${finalPrice.toFixed(2)} EUR`
+              : `${0} EUR`}
+          </h4>
         </div>
       </div>
       <div className="discount-container">

@@ -52,11 +52,17 @@ const ProductDisplay = () => {
                 className="click-container"
                 onClick={() => handlerSingle(product)}
               ></div>
-              <img
-                alt="first-pic"
-                className="item-img"
-                src={product.Images[0]}
-              />
+              {product.Images[0] ? (
+                <img
+                  alt="first-pic"
+                  className="item-img"
+                  src={product.Images[0]}
+                />
+              ) : (
+                <div className="loading">
+                  <h3>Loading</h3>
+                </div>
+              )}
 
               <div className="item-info">
                 <p className="item-Name">
@@ -69,6 +75,7 @@ const ProductDisplay = () => {
                   <p className=" talle-text ">Talla</p>
                   <ul className="shop-container-size-dropdown">
                     <li
+                      key={`size-s ${i}`}
                       className={
                         !orderSize || orderSize.size !== "S"
                           ? "single-sizes-container"
@@ -84,6 +91,7 @@ const ProductDisplay = () => {
                       S
                     </li>
                     <li
+                      key={`size-m ${i}`}
                       className={
                         !orderSize || orderSize.size !== "M"
                           ? "single-sizes-container"
@@ -99,6 +107,7 @@ const ProductDisplay = () => {
                       M
                     </li>
                     <li
+                      key={`size-l ${i}`}
                       className={
                         !orderSize || orderSize.size !== "L"
                           ? "single-sizes-container"

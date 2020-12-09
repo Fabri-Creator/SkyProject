@@ -24,7 +24,7 @@ export function totalPrice(order) {
 
 export function addProductOrder(order, product) {
   const newOrder = order.map((item) => {
-    if (item.itemId == product.itemId) {
+    if (item.itemId === product.itemId) {
       item.amount++;
       return item;
     } else {
@@ -45,7 +45,6 @@ export function substractItem(order, product) {
   });
   if (product.amount <= 0) {
     var filtered = newOrder.filter((item) => item.itemId !== product.itemId);
-    console.log("vengo de remove function", filtered);
     return filtered;
   }
 
@@ -63,5 +62,15 @@ export function getDiscount(code) {
     return discount;
   } else {
     return (discount = 1);
+  }
+}
+export function productCounterFunction(order) {
+  if (order != 0) {
+    var counter = order.map((element) => element.amount);
+    var reducer = (totalAmount, amount) => {
+      return totalAmount + amount;
+    };
+    var finalCounter = counter.reduce(reducer);
+    return finalCounter;
   }
 }

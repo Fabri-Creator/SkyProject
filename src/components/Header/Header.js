@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogout } from "../../logic/user";
 import { getFilteredProductsItems, homeProducts } from "../../logic/product";
+import { productCounterFunction } from "../../logic/order";
 import { setProductCollection } from "../../redux/actions/productAction";
-
 import "./Header.scss";
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setProductCounter(order.length);
+    setProductCounter(productCounterFunction(order));
   }, [order]);
 
   useEffect(() => {
@@ -31,11 +31,13 @@ const Header = () => {
       const db = await homeProducts();
       dispatch(setProductCollection(db));
     }
-
     getHomeProducts();
   }, []);
 
-  // const handlerOrder = () => {};
+  const handlerResetProduct = async () => {
+    const db = await homeProducts();
+    dispatch(setProductCollection(db));
+  };
 
   return (
     <div className="main-header">
@@ -44,6 +46,7 @@ const Header = () => {
           Mujer
           <ul className="gender-container-text-droppable-woman">
             <li
+              key="M-Novedades"
               onClick={() =>
                 handlerFilter({
                   One: "Mujer",
@@ -53,27 +56,36 @@ const Header = () => {
             >
               Novedades
             </li>
-            <li>Abrigos</li>
-            <li>Camisetas</li>
-            <li>Pantalones</li>
-            <li>Vestidos</li>
-            <li>Zapatos</li>
-            <li>Accesorios</li>
+            <li key="M-Abrigos">Abrigos</li>
+            <li key="M-Camisetas">Camisetas</li>
+            <li key="M-Pantalones">Pantalones</li>
+            <li key="M-Vestidos">Vestidos</li>
+            <li key="M-Zapatos">Zapatos</li>
+            <li key="M-Accesorios">Accesorios</li>
           </ul>
         </div>
 
         <div className="gender-container-man">
           Hombre
           <ul className="gender-container-text-droppable-man">
-            <li>Novedades</li>
-            <li>Abrigos</li>
-            <li>Camisetas</li>
-            <li>Pantalones</li>
-            <li>Vermudas</li>
-            <li>Zapatos</li>
-            <li>Accesorios</li>
+            <li key="H-Novedades">Novedades</li>
+            <li key="H-Abrigos">Abrigos</li>
+            <li key="H-Camisetas">Camisetas</li>
+            <li key="H-Pantalones">Pantalones</li>
+            <li key="H-Shorts">Shorts</li>
+            <li key="H-Zapatos">Zapatos</li>
+            <li key="H-Accesorios">Accesorios</li>
           </ul>
         </div>
+      </div>
+      <div className="logo-container">
+        <h2
+          onClick={() => {
+            handlerResetProduct();
+          }}
+        >
+          HangMan
+        </h2>
       </div>
       <div className="user-shop-container">
         {user ? (
@@ -111,8 +123,13 @@ const Header = () => {
             <div className="items-shop-order">
               {order &&
                 order.map((item, i) => (
-                  <div className="pic-shop-order-hover">
-                    <img className="picture" src={item.info.Images[0]} />
+                  <div key={`item.Ref ${i}`} className="pic-shop-order-hover">
+                    <img
+                      key={`item.Name ${i}`}
+                      alt={`item.Id ${i}`}
+                      className="picture"
+                      src={item.info.Images[0]}
+                    />
                     <p className="info-shop-hover-name">{item.name}</p>
                     <p className="info-shop-hover-price">{item.info.Price}</p>
                   </div>
