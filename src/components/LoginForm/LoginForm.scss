@@ -21,3 +21,12 @@
     color: black;
   }
 }
+@media only screen and (max-width: 668px) {
+  .login-container {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 500%;
+    height: 50%;
+  }
+}

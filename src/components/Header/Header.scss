@@ -11,9 +11,9 @@
   background-color: black;
   color: rgb(204, 204, 204);
 }
-.gender-container {
+.gender-container-big {
   display: flex;
-  .gender-container-man {
+  .gender-container-man-big {
     width: 15%;
     height: auto;
     left: 5rem;
@@ -27,7 +27,7 @@
       display: none;
     }
   }
-  .gender-container-man:hover {
+  .gender-container-man-big:hover {
     .gender-container-text-droppable-man {
       display: block;
       top: 100%;
@@ -47,7 +47,7 @@
     }
   }
 
-  .gender-container-woman {
+  .gender-container-woman-big {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -71,7 +71,7 @@
     }
   }
 }
-.gender-container-woman:hover {
+.gender-container-woman-big:hover {
   .gender-container-text-droppable-woman {
     display: block;
     top: 100%;
@@ -83,6 +83,9 @@
       padding: 0.3rem 0rem;
     }
   }
+}
+.menu-container {
+  display: none;
 }
 .user-shop-container {
   position: relative;
@@ -215,4 +218,89 @@ a {
   font-size: 0.9rem;
   font-weight: 300;
   padding: 0.3rem;
+}
+@media only screen and (max-width: 668px) {
+  .gender-container-big {
+    display: none;
+  }
+
+  .main-header {
+    position: relative;
+    .black-background {
+      width: 100%;
+      height: 50vh;
+      background-color: black;
+      position: absolute;
+      right: 0rem;
+      left: 0rem;
+      top: 5rem;
+      bottom: 0rem;
+    }
+
+    .gender-container-woman {
+      position: absolute;
+      top: 1rem;
+      left: 5%;
+      display: flex;
+      justify-content: center;
+
+      .gender-container-text-droppable-woman {
+        display: block;
+        list-style: none;
+        padding: 2rem 0.3rem;
+
+        li {
+          padding: 0.5rem 0.3rem;
+        }
+      }
+    }
+    .gender-container-man {
+      position: absolute;
+      top: 1rem;
+      left: 50%;
+      display: flex;
+      justify-content: center;
+
+      .gender-container-text-droppable-man {
+        display: block;
+        list-style: none;
+        padding: 2rem 0.3rem;
+        margin: 0rem;
+
+        li {
+          padding: 0.5rem 0.3rem;
+        }
+      }
+    }
+
+    .menu-container {
+      display: block;
+    }
+
+    justify-content: space-between;
+    .gender-container {
+      display: block;
+    }
+    .logo-container h2 {
+      font-size: 1.1rem;
+    }
+    .user-shop-container {
+      width: 30%;
+      justify-content: flex-end;
+      margin-right: 0;
+      padding-right: 0;
+      .user-session-container {
+        display: none;
+      }
+      .user-session-container {
+        padding: 0rem 1rem;
+      }
+      div.fas {
+        margin: 0rem 1rem;
+      }
+    }
+    .item-container {
+      width: 45%;
+    }
+  }
 }

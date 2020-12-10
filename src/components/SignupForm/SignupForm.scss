@@ -18,3 +18,11 @@
     color: black;
   }
 }
+@media only screen and (max-width: 668px) {
+  .Signin-container {
+    display: flex;
+    padding-top: 30%;
+    width: 500%;
+    height: 100%;
+  }
+}

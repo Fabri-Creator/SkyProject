@@ -11,6 +11,7 @@ const Header = () => {
   const user = useSelector((state) => state.user);
   const order = useSelector((state) => state.order);
   const [productCounter, setProductCounter] = useState(0);
+  const [openFilter, setOpenFiter] = useState(false);
   const dispatch = useDispatch();
 
   const handlerLogout = () => {
@@ -39,10 +40,21 @@ const Header = () => {
     dispatch(setProductCollection(db));
   };
 
+  const handlerOpenMenu = async () => {
+    if (openFilter === false) {
+      setOpenFiter(true);
+    } else {
+      setOpenFiter(false);
+    }
+  };
+
   return (
     <div className="main-header">
-      <div className="gender-container">
-        <div className="gender-container-woman">
+      <div className="menu-container" onClick={() => handlerOpenMenu()}>
+        <i className="fas fa-bars"></i>
+      </div>
+      <div className="gender-container-big">
+        <div className="gender-container-woman-big">
           Mujer
           <ul className="gender-container-text-droppable-woman">
             <li
@@ -65,7 +77,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="gender-container-man">
+        <div className="gender-container-man-big">
           Hombre
           <ul className="gender-container-text-droppable-man">
             <li key="H-Novedades">Novedades</li>
@@ -78,6 +90,47 @@ const Header = () => {
           </ul>
         </div>
       </div>
+      {openFilter === true && (
+        <div className="black-background">
+          <div className="gender-container">
+            <div className="gender-container-woman">
+              Mujer
+              <ul className="gender-container-text-droppable-woman">
+                <li
+                  key="M-Novedades"
+                  onClick={() =>
+                    handlerFilter({
+                      One: "Mujer",
+                      Two: "Novedades",
+                    })
+                  }
+                >
+                  Novedades
+                </li>
+                <li key="M-Abrigos">Abrigos</li>
+                <li key="M-Camisetas">Camisetas</li>
+                <li key="M-Pantalones">Pantalones</li>
+                <li key="M-Vestidos">Vestidos</li>
+                <li key="M-Zapatos">Zapatos</li>
+                <li key="M-Accesorios">Accesorios</li>
+              </ul>
+            </div>
+
+            <div className="gender-container-man">
+              Hombre
+              <ul className="gender-container-text-droppable-man">
+                <li key="H-Novedades">Novedades</li>
+                <li key="H-Abrigos">Abrigos</li>
+                <li key="H-Camisetas">Camisetas</li>
+                <li key="H-Pantalones">Pantalones</li>
+                <li key="H-Shorts">Shorts</li>
+                <li key="H-Zapatos">Zapatos</li>
+                <li key="H-Accesorios">Accesorios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="logo-container">
         <h2
           onClick={() => {
