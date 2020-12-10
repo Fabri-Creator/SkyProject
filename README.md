@@ -32,3 +32,4 @@ Usuario meta: usuarios meta, es cualquiera que utilice la web-app e inggrese con
   - vaciar la orden (carrito)
 
 **Producto**
+https://github.com/Fabri-Creator/SkyProyect/issues/1#issue-761504809
