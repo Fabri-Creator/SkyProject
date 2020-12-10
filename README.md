@@ -37,3 +37,11 @@ Usuario meta: usuarios meta, es cualquiera que utilice la web-app e inggrese con
 
 ![profduct](https://user-images.githubusercontent.com/58776923/101815918-96cde400-3b20-11eb-9f71-62d3ebadb24f.jpg)
 
+![detalle](https://user-images.githubusercontent.com/58776923/101816306-25dafc00-3b21-11eb-8132-c5700f6a8a2a.jpg)
+
+![Untitled-2](https://user-images.githubusercontent.com/58776923/101816377-3ee3ad00-3b21-11eb-8645-22a22119843f.jpg)
+
+
+
+
+
