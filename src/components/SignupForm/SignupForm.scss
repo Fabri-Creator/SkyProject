@@ -15,14 +15,25 @@
     border-bottom: 1px solid darkgrey;
   }
   .button-submit {
-    color: black;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 300;
   }
 }
 @media only screen and (max-width: 668px) {
   .Signin-container {
     display: flex;
-    padding-top: 30%;
-    width: 500%;
-    height: 100%;
+    padding-top: 1%;
+    width: 100%;
+    height: 60%;
+    margin-top: 1%;
   }
 }

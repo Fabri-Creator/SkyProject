@@ -1,4 +1,6 @@
 .main-footer {
+  display: flex;
+  justify-content: center;
   font-size: 0.8rem;
   position: absolute;
   height: auto;
@@ -6,6 +8,7 @@
   width: 100%;
   background-color: black;
   color: blanchedalmond;
+  height: 4rem;
 }
 .info-list-links {
   padding: 0.2rem;

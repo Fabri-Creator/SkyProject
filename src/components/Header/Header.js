@@ -137,7 +137,7 @@ const Header = () => {
             handlerResetProduct();
           }}
         >
-          HangMan
+          SkyCommerce
         </h2>
       </div>
       <div className="user-shop-container">

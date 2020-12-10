@@ -57,7 +57,9 @@ const LoginForm = () => {
           {loginError !== "" && <h3>LOGIN_ERROR</h3>}
         </div>
         <div className="login-field-container button-container">
-          <button onClick={handleSubmit}>Send</button>
+          <button className="button-submit" onClick={handleSubmit}>
+            Send
+          </button>
         </div>
       </form>
     </div>

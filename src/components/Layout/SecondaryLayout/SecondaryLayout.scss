@@ -1,5 +1,6 @@
 .second-layout-container {
   position: relative;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   height: 100vh;

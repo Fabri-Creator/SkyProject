@@ -51,7 +51,9 @@ const SignupForm = () => {
           />
         </div>
         <div className="Signin-field-container button-container">
-          <button onClick={handleSubmit}>Send</button>
+          <button className="button-submit" onClick={handleSubmit}>
+            Send
+          </button>
         </div>
       </form>
     </div>
