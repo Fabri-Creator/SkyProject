@@ -34,7 +34,8 @@ Usuario meta: usuarios meta, es cualquiera que utilice la web-app e ingrese con 
   - ingresar datos y confirmar la compra
   
 **Tecnologías**
-![carroooo](https://user-images.githubusercontent.com/58776923/101816675-9b46cc80-3b21-11eb-9326-8eaed3f10a78.jpg) 
+
+![tabla](https://user-images.githubusercontent.com/58776923/101886318-99215400-3b9b-11eb-8ef7-febfad14d200.jpg)
 
 **Flujo funcional** 
 
