@@ -15,10 +15,15 @@ Los productos se separan en categorias, las dos principales son Mujer y Hombre. 
 ## Variantes de usuario
 
 **Usuario admin: es un usuario predeterminado capaz de crear productos y borrarlos.**
+mail: admin2@gmail.com
+password: 123456
 
 La acción crear productos permite agregar mágenes relacionadas, marca, precio, stock, tallas y detallar la información del producto.
 
 Usuario meta: usuarios meta, es cualquiera que utilice la web-app e ingrese con su nombre de usuario. Si no cuenta con uno, puede crearlo con su email.
+
+mail: juan@gmail.com
+password: 123456
 
 - **La experiencia de los usuarios una vez logeados consta de:**
   - visualizar los porductos
