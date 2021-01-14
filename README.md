@@ -36,12 +36,16 @@ The final user experience once logged in:
   - empty order (cart)
   - apply discount code
   - enter personal data and confirm the purchase
-  
+
+
+**Customer Journey** 
+
+
+
 **Technologies**
 
 ![tabla](https://user-images.githubusercontent.com/58776923/101886318-99215400-3b9b-11eb-8ef7-febfad14d200.jpg)
 
-**Flujo funcional** 
 
 **Producto**
 
