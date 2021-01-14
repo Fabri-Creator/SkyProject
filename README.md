@@ -50,30 +50,7 @@ The final user experience once logged in:
   
   Firebase Collection:
   
-  userId {
-    admin: boolean
-    name: string
-    mail: string
-  }
-  
-  products {
-    brand: string
-    category: { 
-      string: boolean
-    }
-    createdAt: number
-    details: string
-    images: [
-      string
-    ]
-    name: string
-    price: number
-    ref: string
-    Sizes: {
-      string: number
-    }        
-  }
-
+  ![data estructure](https://user-images.githubusercontent.com/58776923/104592023-dcc11f00-566d-11eb-8bc5-5d01398995b2.jpg)
 
 **Producto**
 
