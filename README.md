@@ -2,43 +2,42 @@
 
 Check the website here: [SkyCommerce](https://ecommerce-6dca9.web.app/)
 
-https://ecommerce-6dca9.web.app/
+## Proyect Description
 
-## Descripción de proyecto
+Ecommerce inspired by inditex digital products, designed to expose products (clothing) by the admin user and puchase them by the final user.
+It is the final project of the Frontend Development Course in
+(https://www.skylabcoders.com/es)
 
-Ecommerce inspirada en los productos inditex, pensada para exponer productos (vestimenta) por parte del usuario admin y visualizarlos por parte del usuario meta.
+It was developed in 3 weeks using the technologies and work methodologies learned during the three-month bootcamp.
 
-Consta de previsualización de productos y una sección individual donde se pueden ver detalles, varias imágenes y tallas disponibles.
 
-Los productos se separan en categorias, las dos principales son Mujer y Hombre. Las demas clasifican los productos por tipología ej: Abrigos.
+## User types
 
-## Variantes de usuario
+**Admin: is a user capable of add new products, edit products and delete them.**
+  mail: admin2@gmail.com
+  password: 123456
 
-**Usuario admin: es un usuario predeterminado capaz de crear productos y borrarlos.**
-mail: admin2@gmail.com
-password: 123456
+The add products action allows you to add related images, brand, price, stock, sizes and details to the new product.
 
-La acción crear productos permite agregar mágenes relacionadas, marca, precio, stock, tallas y detallar la información del producto.
+**Final user: it is anyone who uses the web-app and enters with their username. If you don't have one, you can create it with your email account.**
+  mail: juan@gmail.com
+  password: 123456
 
-Usuario meta: usuarios meta, es cualquiera que utilice la web-app e ingrese con su nombre de usuario. Si no cuenta con uno, puede crearlo con su email.
-
-mail: juan@gmail.com
-password: 123456
-
-- **La experiencia de los usuarios una vez logeados consta de:**
-  - visualizar los porductos
-  - filtrar los productos segun genero y tipología
-  - ingresar a los productos para ver sus detalles y disponibilidad.
-  - agregar productos a su orden (esto puede ser desde la página principal o dentro de cada detalle de producto)
-  -previsualizar su orden desde la sección de productos
-  - ingresar a su orden (carrito)
-  - agregar y quitar cantidades de productos
-  - eliminar productos de la orden
-  - vaciar la orden (carrito)
-  - ingresar código de descuento
-  - ingresar datos y confirmar la compra
+**The final user experience once logged in: **
   
-**Tecnologías**
+  - visualize products
+  - filter products according to gender and typology
+  - enter in to the products to see their details and availability.
+  - add products to your order (this can be done from the main page or within each product detail)
+  - preview your order from the home page
+  - enter your order (cart)
+  - add and remove products quantities (cart)
+  - remove products from the order
+  - empty order (cart)
+  - apply discount code
+  - enter personal data and confirm the purchase
+  
+**Technologies**
 
 ![tabla](https://user-images.githubusercontent.com/58776923/101886318-99215400-3b9b-11eb-8ef7-febfad14d200.jpg)
 
