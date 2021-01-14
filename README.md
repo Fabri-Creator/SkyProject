@@ -44,7 +44,7 @@ The final user experience once logged in:
 
 **Technologies**
 
-![tabla](https://user-images.githubusercontent.com/58776923/101886318-99215400-3b9b-11eb-8ef7-febfad14d200.jpg)
+![stacks images](https://user-images.githubusercontent.com/58776923/104589704-90281480-566a-11eb-86cb-7e47920e246a.jpg)
 
 
 **Producto**
