@@ -57,4 +57,7 @@ The final user experience once logged in:
 
   Desktop
   
-  ![desktop screenshots](https://user-images.githubusercontent.com/58776923/104594675-ca48e480-5671-11eb-879c-a523551e58f7.jpg)
+  ![desktop screenshots](https://user-images.githubusercontent.com/58776923/104594888-17c55180-5672-11eb-8e47-0f93f2f34322.jpg)
+  
+  
+  
