@@ -4,12 +4,10 @@ Check the website here: [SkyCommerce](https://ecommerce-6dca9.web.app/)
 
 ## Proyect Description
 
-Ecommerce inspired by inditex digital products, designed to expose products (clothing) by the admin user and puchase them by the final user.
-It is the final project of the Frontend Development Course in
-(https://www.skylabcoders.com/es)
+Ecommerce inspired by inditex digital products, designed to expose products (clothing) by admin user and puchase them by final user.
+It is the final project of the Frontend Development Bootcamp at https://www.skylabcoders.com/es
 
-It was developed in 3 weeks using the technologies and work methodologies learned during the three-month bootcamp.
-
+It was developed in 3 weeks using technologies and work methodologies learned during the three month bootcamp.
 
 ## User types
 
@@ -26,16 +24,16 @@ The add products action allows you to add related images, brand, price, stock, s
 The final user experience once logged in: 
   
   - visualize products
-  - filter products according to gender and typology
+  - filter products according to gender and typology (Mujer/Novedades, the only one working)
   - enter in to the products to see their details and availability.
-  - add products to your order (this can be done from the main page or within each product detail)
-  - preview your order from the home page
-  - enter your order (cart)
+  - add products to your order (this can be done from the home page or within each product detail)
+  - preview your order from the home page (modal)
+  - enter in to your order (cart)
   - add and remove products quantities (cart)
   - remove products from the order
   - empty order (cart)
   - apply discount code
-  - enter personal data and confirm the purchase
+  - enter personal data and confirm your purchase
 
 
 **Customer Journey** 
