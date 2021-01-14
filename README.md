@@ -50,7 +50,8 @@ The final user experience once logged in:
   
   Firebase Collection:
   
-  ![data estructure](https://user-images.githubusercontent.com/58776923/104592023-dcc11f00-566d-11eb-8bc5-5d01398995b2.jpg)
+![data estructure](https://user-images.githubusercontent.com/58776923/104592318-4b05e180-566e-11eb-8198-1bcd11ee65a2.jpg)
+
 
 **Producto**
 
