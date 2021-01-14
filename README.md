@@ -46,6 +46,34 @@ The final user experience once logged in:
 
 ![stacks images](https://user-images.githubusercontent.com/58776923/104589704-90281480-566a-11eb-86cb-7e47920e246a.jpg)
 
+**Data structure**
+  
+  Firebase Collection:
+  
+  userId {
+    admin: boolean
+    name: string
+    mail: string
+  }
+  
+  products {
+    brand: string
+    category: { 
+      string: boolean
+    }
+    createdAt: number
+    details: string
+    images: [
+      string
+    ]
+    name: string
+    price: number
+    ref: string
+    Sizes: {
+      string: number
+    }        
+  }
+
 
 **Producto**
 
