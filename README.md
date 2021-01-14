@@ -55,21 +55,6 @@ The final user experience once logged in:
 
 **Producto**
 
-![home](https://user-images.githubusercontent.com/58776923/101815585-0b545300-3b20-11eb-88b9-ebdf03f22bf1.jpg)
-
-![full](https://user-images.githubusercontent.com/58776923/101887693-80b23900-3b9d-11eb-9bf8-6479c4fbbfb2.jpg)
-
-![profduct](https://user-images.githubusercontent.com/58776923/101815918-96cde400-3b20-11eb-9f71-62d3ebadb24f.jpg)
-
-![detalle](https://user-images.githubusercontent.com/58776923/101816306-25dafc00-3b21-11eb-8132-c5700f6a8a2a.jpg)
-
-![Untitled-2](https://user-images.githubusercontent.com/58776923/101816377-3ee3ad00-3b21-11eb-8645-22a22119843f.jpg)
-
-![carrito](https://user-images.githubusercontent.com/58776923/101887351-084b7800-3b9d-11eb-8409-656f5d1b4999.jpg)
-
-![ful](https://user-images.githubusercontent.com/58776923/101888042-f4544600-3b9d-11eb-9890-fed416950412.jpg)
-
-
-
-
-
+  Desktop
+  
+  ![desktop screenshots](https://user-images.githubusercontent.com/58776923/104594675-ca48e480-5671-11eb-879c-a523551e58f7.jpg)
