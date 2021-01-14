@@ -40,7 +40,7 @@ The final user experience once logged in:
 
 **Customer Journey** 
 
-
+![Customer journey](https://user-images.githubusercontent.com/58776923/104585472-594f0000-5664-11eb-9c13-e56545d8e912.jpg)
 
 **Technologies**
 
