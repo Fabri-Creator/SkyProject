@@ -1,2 +1,2 @@
 # SkyProyect
-Proyecto final de curso Front-End SkyLab
+Frontend Development Bootcamp  -  Final Proyect  -  eCoommerce
