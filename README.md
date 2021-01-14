@@ -23,7 +23,7 @@ The add products action allows you to add related images, brand, price, stock, s
   mail: juan@gmail.com
   password: 123456
 
-**The final user experience once logged in: **
+The final user experience once logged in: 
   
   - visualize products
   - filter products according to gender and typology
