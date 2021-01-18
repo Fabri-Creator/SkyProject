@@ -2,7 +2,7 @@
 
 Check the website here: [SkyCommerce](https://ecommerce-6dca9.web.app/)
 
-## Proyect Description
+## Project Description
 
 Ecommerce inspired by inditex digital products, designed to expose products (clothing) by admin user and puchase them by final user.
 It is the final project of the Frontend Development Bootcamp at https://www.skylabcoders.com/es
