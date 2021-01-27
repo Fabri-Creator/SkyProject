@@ -1,9 +1,32 @@
-.delte-container {
+.delete-main-container {
   height: auto;
   padding-bottom: 2rem;
-  margin-top: 5rem;
+  margin: 6rem 0rem 18rem 0rem;
+  // overflow-y: auto;
+  width: 40%;
+  border: 1px solid darkgray;
+}
+.delete-container {
   display: flex;
   align-content: center;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
+}
+.delete-product-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  color: black;
+}
+.delete-product-detail {
+  margin: 1rem;
+  width: 80%;
+}
+.delete-product-images {
+  margin: 1rem;
+  width: 80%;
+  img {
+    width: 50%;
+  }
 }

@@ -26,8 +26,8 @@ const AdminLoginDelete = () => {
 
   return (
     <SecondaryLayout>
-      <ProductList></ProductList>
       <DeleteProduct></DeleteProduct>
+      <ProductList></ProductList>
     </SecondaryLayout>
   );
 };

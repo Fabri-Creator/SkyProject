@@ -1,6 +1,6 @@
 import { SET_ADMIN } from "../actions/adminAction";
 
-const defaultAdmin = "Add";
+const defaultAdmin = { add: true, product: false };
 
 function adminReducer(state = defaultAdmin, action) {
   switch (action.type) {

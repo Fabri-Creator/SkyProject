@@ -1,7 +1,6 @@
 import "./ProductList.scss";
 import { deleteProduct } from "../../logic/product";
 import { useSelector, useDispatch } from "react-redux";
-import { setProductCollection } from "../../redux/actions/productAction";
 import { setAdmin } from "../../redux/actions/adminAction";
 import { useHistory } from "react-router";
 
@@ -11,24 +10,23 @@ const ProductList = () => {
   const products = useSelector((state) => state.product);
   const admin = useSelector((state) => state.admin);
 
-  // const handlerRemoveProduct = async (obj) => {
-  //   const { id } = obj;
-  //   const newCollection = await deleteProduct(id, obj);
-  //   dispatch(setProductCollection(newCollection));
-  // };
-
-  const handlerSetEdit = () => {
-    dispatch(setAdmin("Edit"));
+  const handlerSetEdit = (p) => {
+    const editAdmin = { edit: true, product: p };
+    dispatch(setAdmin(editAdmin));
     history.push("/admin/login/edit");
+    console.log("changesss", admin);
   };
 
-  const handlerSetDelete = () => {
-    dispatch(setAdmin("Delete"));
+  const handlerSetDelete = (p) => {
+    const deleteAdmin = { delete: true, product: p };
+    dispatch(setAdmin(deleteAdmin));
     history.push("/admin/login/delete");
+    console.log("changesss", admin);
   };
 
-  const handlerSetAdd = () => {
-    dispatch(setAdmin("Add"));
+  const handlerSetAdd = (p) => {
+    const addAdmin = { add: true, product: p };
+    dispatch(setAdmin(addAdmin));
     history.push("/admin/login");
   };
 
@@ -39,25 +37,24 @@ const ProductList = () => {
         <input
           className="product-searcher-title"
           type="text"
-          placeholder="Buscar"
+          placeholder="Search"
         ></input>
       </div>
       <div className="product-list-container">
         {products &&
           products.map((p, i) => (
             <div key={i} className="product-item">
-              {admin === "Add" ? (
+              {admin.add === true ? (
                 <div className="product-hover">
                   <h3
                     className="product-hover-action"
-                    onClick={() => handlerSetEdit()}
+                    onClick={() => handlerSetEdit(p)}
                   >
                     Edit
                   </h3>
                   <h3
                     className="product-hover-action"
-                    // onClick={() => handlerRemoveProduct(p)}
-                    onClick={() => handlerSetDelete()}
+                    onClick={() => handlerSetDelete(p)}
                   >
                     Delete
                   </h3>
@@ -66,12 +63,17 @@ const ProductList = () => {
                 <></>
               )}
 
-              {admin === "Delete" ? (
+              {admin.delete === true ? (
                 <div className="product-hover">
-                  <h3 className="product-hover-action">Edit</h3>
                   <h3
                     className="product-hover-action"
-                    onClick={() => handlerSetAdd()}
+                    onClick={() => handlerSetEdit(p)}
+                  >
+                    Edit
+                  </h3>
+                  <h3
+                    className="product-hover-action"
+                    onClick={() => handlerSetAdd(p)}
                   >
                     Add
                   </h3>
@@ -80,17 +82,17 @@ const ProductList = () => {
                 <></>
               )}
 
-              {admin === "Edit" ? (
+              {admin.edit === true ? (
                 <div className="product-hover">
                   <h3
                     className="product-hover-action"
-                    onClick={() => handlerSetAdd()}
+                    onClick={() => handlerSetAdd(p)}
                   >
                     Add
                   </h3>
                   <h3
                     className="product-hover-action"
-                    onClick={() => handlerSetDelete()}
+                    onClick={() => handlerSetDelete(p)}
                   >
                     Delete
                   </h3>
@@ -108,7 +110,7 @@ const ProductList = () => {
                 <div className="p-cat-container">
                   {p.Categories &&
                     Object.keys(p.Categories).map((cate, i) => (
-                      <p key={i + cate} className="p-Category">{`- ${[
+                      <p key={i + cate} className="p-Category">{` - ${[
                         cate,
                       ]} `}</p>
                     ))}

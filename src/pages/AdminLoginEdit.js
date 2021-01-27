@@ -26,8 +26,8 @@ const AdminLoginEdit = () => {
 
   return (
     <SecondaryLayout>
-      <ProductList></ProductList>
       <EditProduct></EditProduct>
+      <ProductList></ProductList>
     </SecondaryLayout>
   );
 };
