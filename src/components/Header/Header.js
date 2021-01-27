@@ -55,6 +55,7 @@ const Header = () => {
       </div>
       <div className="gender-container-big">
         <div className="gender-container-woman-big">
+          <div className="filter-background"></div>
           Mujer
           <ul className="gender-container-text-droppable-woman">
             <li
@@ -76,8 +77,8 @@ const Header = () => {
             <li key="M-Accesorios">Accesorios</li>
           </ul>
         </div>
-
         <div className="gender-container-man-big">
+          <div className="filter-background"></div>
           Hombre
           <ul className="gender-container-text-droppable-man">
             <li key="H-Novedades">Novedades</li>
@@ -144,7 +145,7 @@ const Header = () => {
         {user ? (
           <div className="user-session-container">{user.name}</div>
         ) : (
-          <div className="user-session-container">No user</div>
+          <div className="user-session-container"></div>
         )}
         <Link to="/user/login" className="far fa-user">
           {user && !user.admin ? (

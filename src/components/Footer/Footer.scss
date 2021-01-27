@@ -8,10 +8,22 @@
   width: 100%;
   background-color: black;
   color: blanchedalmond;
-  height: 4rem;
 }
-.info-list-links {
-  padding: 0.2rem;
+.links-container {
+  height: auto;
+  padding: 2rem 0rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-list {
+  display: flex;
+  flex-direction: column;
+}
+.info-list li {
+  list-style-type: none;
+  padding: 0.5rem 0rem;
 }
 @media only screen and (max-width: 668px) {
   .main-footer {

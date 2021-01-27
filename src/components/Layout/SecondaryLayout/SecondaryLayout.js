@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { userLogout } from "../../../logic/user";
 import { useSelector } from "react-redux";
@@ -38,7 +39,7 @@ const SecondaryLayout = ({ children }) => {
               )}
             </>
           ) : (
-            <div className="header-section-right-user">No user</div>
+            <div className="header-section-right-user"></div>
           )}
         </div>
       </div>

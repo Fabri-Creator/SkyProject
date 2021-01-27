@@ -52,7 +52,7 @@ const SignupForm = () => {
         </div>
         <div className="Signin-field-container button-container">
           <button className="button-submit" onClick={handleSubmit}>
-            Send
+            Sign up
           </button>
         </div>
       </form>

@@ -28,7 +28,6 @@
 
   .fas:hover {
     color: black;
-    border-bottom: 1px solid black;
   }
   .header-section-right-user {
     align-self: flex-end;
@@ -39,8 +38,5 @@
     align-self: flex-end;
     padding: 0.8rem 0.8rem;
     font-size: 0.9rem;
-  }
-  .header-section-right-user-logout:hover {
-    border-bottom: 1px solid black;
   }
 }

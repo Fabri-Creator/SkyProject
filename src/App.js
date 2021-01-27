@@ -6,6 +6,8 @@ import firebase from "firebase/app";
 import Home from "./pages/Home";
 import UserLogin from "./pages/UserLogin";
 import AdminLogin from "./pages/AdminLogin";
+import AdminLoginDelete from "./pages/AdminLoginDelete";
+import AdminLoginEdit from "./pages/AdminLoginEdit";
 import NewOrder from "./pages/NewOrder";
 import InfoPurchase from "./pages/InfoPurchase";
 
@@ -49,6 +51,12 @@ function App() {
           </Route>
           <Route exact path="/admin/login">
             <AdminLogin />
+          </Route>
+          <Route exact path="/admin/login/delete">
+            <AdminLoginDelete />
+          </Route>
+          <Route exact path="/admin/login/edit">
+            <AdminLoginEdit />
           </Route>
           <Route exact path="/order">
             <NewOrder />

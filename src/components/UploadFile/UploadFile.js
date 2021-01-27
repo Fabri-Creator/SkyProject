@@ -23,7 +23,6 @@ const UploadFile = ({ folder, onFileUpload }) => {
         }
       });
     }
-    console.log("uploadURL => ", uploadURL);
   };
 
   return (
@@ -34,14 +33,6 @@ const UploadFile = ({ folder, onFileUpload }) => {
         name="productPicture"
         type="file"
       />
-      <div className="file-image-container">
-        {uploadURL &&
-          uploadURL.map((pic, i) => (
-            <div className="img-cintainer-product" key={pic}>
-              <img alt={`product-img ${i}`} className="img-upload" src={pic} />
-            </div>
-          ))}
-      </div>
       <div>
         <span className="progress-sign">Progress: {uploadProgress}</span>
       </div>

@@ -1,14 +1,18 @@
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { addProductForm } from "../../logic/product";
 import UploadFile from "../UploadFile/UploadFile";
 import "./AddProduct.scss";
 
 const AddProduct = () => {
-  const history = useHistory();
   const { register, handleSubmit, reset, errors } = useForm();
   const [picURL, setPicURL] = useState([]);
+
+  const handleCancel = () => {
+    reset();
+    setPicURL([]);
+  };
+
   const onSubmit = async (data) => {
     const {
       productName,
@@ -31,11 +35,8 @@ const AddProduct = () => {
       productSizeM,
       productSizeL
     );
-
-    setPicURL([]);
     reset();
-    console.log("deberiaaa");
-    history.push("/admin/login");
+    handleFileUpload([]);
     return newProduct;
   };
 
@@ -46,6 +47,7 @@ const AddProduct = () => {
   return (
     <div className="add-form-container">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="add-title">Add new product</div>
         <div className="input-div-container">
           <input
             className="input-class"
@@ -139,19 +141,33 @@ const AddProduct = () => {
         <div className="file-div-container">
           <UploadFile folder="ProductFolder" onFileUpload={handleFileUpload} />
         </div>
+        <div className="file-image-container">
+          {picURL &&
+            picURL.map((pic, i) => (
+              <div className="img-cintainer-product" key={pic}>
+                <img
+                  alt={`product-img ${i}`}
+                  className="img-upload"
+                  src={pic}
+                />
+              </div>
+            ))}
+        </div>
         <div className="input-div-container">
           <textarea
-            rows="10"
-            columns="10"
+            rows="4"
+            columns="5"
             className="textarea-class"
             name="productDetails"
             placeholder="Details"
             ref={register}
           />
         </div>
-
         <button className="submit-button">Add</button>
       </form>
+      <button onClick={handleCancel} className="cancel-button">
+        Cancel
+      </button>
     </div>
   );
 };

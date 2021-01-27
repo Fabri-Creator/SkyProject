@@ -58,7 +58,7 @@ const LoginForm = () => {
         </div>
         <div className="login-field-container button-container">
           <button className="button-submit" onClick={handleSubmit}>
-            Send
+            Log in
           </button>
         </div>
       </form>

@@ -58,7 +58,7 @@ const PurchaseForm = () => {
         {succes && (
           <>
             <h4 className="final-purchase-msg">{`Felicidades ${owner}!`}</h4>
-            <h4 className="final-purchase-msg">Compra realizada con exito!</h4>
+            <h4 className="final-purchase-msg">Compra realizada con éxito!</h4>
           </>
         )}
       </form>

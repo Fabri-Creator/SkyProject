@@ -13,65 +13,77 @@
 }
 .gender-container-big {
   display: flex;
+  justify-content: flex-start;
   .gender-container-man-big {
-    width: 15%;
-    height: auto;
-    left: 5rem;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-left: 0.5rem;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: 150%;
+    height: 100%;
+    padding: 0rem 2rem;
     .gender-container-text-droppable-man {
       display: none;
     }
   }
   .gender-container-man-big:hover {
+    .filter-background {
+      position: fixed;
+      left: 0rem;
+      top: 3rem;
+      display: block;
+      background-color: black;
+      height: 42%;
+      width: 19%;
+      transform: translateY(0%);
+      transition-delay: 0s, 0s, 0.3s;
+    }
     .gender-container-text-droppable-man {
       display: block;
       top: 100%;
       position: absolute;
-      padding: 0.3rem;
+      padding: 0.3rem 0rem;
       list-style: none;
-      padding-left: 0px;
       li {
-        padding: 0.3rem 0rem;
+        padding: 0.4rem 0rem;
       }
       li:hover {
-        border-bottom: 1px solid black;
         font-weight: 700;
-        font-size: 1.1rem;
-        padding: 0.3rem 0.5rem;
       }
     }
   }
 
   .gender-container-woman-big {
     display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 15%;
-    height: auto;
-    display: flex;
-    margin-left: 0.5rem;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: 150%;
+    padding: 0rem 2rem;
+    height: 100%;
     .gender-container-text-droppable-woman {
       display: none;
       li {
         padding: 0.3rem 0rem;
       }
       li:hover {
-        border-bottom: 1px solid black;
         font-weight: 700;
-        font-size: 1.1rem;
-        padding: 0.3rem 0.5rem;
       }
     }
   }
 }
+.filter-background {
+  transform: translateX(-40%);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, linear 0.3s, z-index 0s linear 0.01s;
+}
 .gender-container-woman-big:hover {
+  .filter-background {
+    position: fixed;
+    left: 0rem;
+    top: 3rem;
+    display: block;
+    background-color: black;
+    height: 18rem;
+    height: 42%;
+    width: 19%;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+  }
+
   .gender-container-text-droppable-woman {
     display: block;
     top: 100%;
@@ -80,7 +92,7 @@
     list-style: none;
     padding-left: 0px;
     li {
-      padding: 0.3rem 0rem;
+      padding: 0.4rem 0rem;
     }
   }
 }
