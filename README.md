@@ -1,2 +1,2 @@
-# SkyProyect
-Frontend Development Bootcamp  -  Final Proyect  -  eCoommerce
+# SkyProject
+Frontend Development Bootcamp  -  Final Project  -  eCoommerce
