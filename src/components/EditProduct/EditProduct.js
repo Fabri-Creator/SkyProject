@@ -37,19 +37,18 @@ const EditProduct = () => {
                   <p key={i + cate} className="p-Category">{` - ${[cate]} `}</p>
                 ))}
             </div>
-            <div className="size-main-conainer">
-              <p>Sizes</p>
-              <div className="size-container">
-                <p>S</p>
-                <p>{admin.product.Sizes.S}</p>
+            <div className="size-main-container">
+              <div className="edit-size-container">
+                <p>Size: S</p>
+                <p>{`${admin.product.Sizes.S} units`}</p>
               </div>
-              <div className="size-container">
-                <p>M</p>
-                <p>{admin.product.Sizes.M}</p>
+              <div className="edit-size-container">
+                <p>Size: M</p>
+                <p>{`${admin.product.Sizes.M} units`}</p>
               </div>
-              <div className="size-container">
-                <p>L</p>
-                <p>{admin.product.Sizes.L}</p>
+              <div className="edit-size-container">
+                <p>Size: L</p>
+                <p>{`${admin.product.Sizes.L} units`}</p>
               </div>
             </div>
             <div className="img-container">
@@ -64,7 +63,9 @@ const EditProduct = () => {
                   </div>
                 ))}
             </div>
-            <button>Editar</button>
+            <div className="button-container">
+              <button className="button-edit-product">Edit</button>
+            </div>
           </form>
         </>
       ) : (
