@@ -2,33 +2,64 @@
 
 Check the website here: [SkyCommerce](https://ecommerce-6dca9.web.app/)
 
-https://ecommerce-6dca9.web.app/
+## Project Description
 
-## Descripción de proyecto
+Ecommerce inspired by inditex digital products, designed to expose products (clothing) by admin user and puchase them by final user.
+It is the final project of the Frontend Development Bootcamp at https://www.skylabcoders.com/es
 
-Ecommerce levemente inspirada en los productos inditex, pensada para exponer productos (vestimenta) por parte del usuario admin y visualizarlos por parte del usuario meta.
+It was developed in 3 weeks using technologies and work methodologies learned during the three month bootcamp.
 
-Consta de previsualización de productos y una sección individual donde se pueden ver detalles, varias imágenes y tallas disponibles.
+## User types
 
-Los productos se separan en categorias, las dos principales son Mujer y Hombre. Las demas clasifican los productos por tipología ej: Abrigos.
+**Admin: is a user capable of add new products, edit products and delete them.**
+  mail: admin2@gmail.com
+  password: 123456
 
-## Variantes de usuario
+The add products action allows you to add related images, brand, price, stock, sizes and details to the new product.
 
-**Usuario admin: es un usuario predeterminado capaz de crear productos y borrarlos.**
+**Final user: it is anyone who uses the web-app and enters with their username. If you don't have one, you can create it with your email account.**
+  mail: juan@gmail.com
+  password: 123456
 
-La acción crear productos permite agregar imágenes relacionadas, marca, precio, stock, tallas y detallar la información del producto.
+The final user experience once logged in: 
+  
+  - visualize products
+  - filter products according to gender and typology (Mujer/Novedades, the only one working)
+  - enter in to the products to see their details and availability.
+  - add products to your order (this can be done from the home page or within each product detail)
+  - preview your order from the home page (modal)
+  - enter in to your order (cart)
+  - add and remove products quantities (cart)
+  - remove products from the order
+  - empty order (cart)
+  - apply discount code
+  - enter personal data and confirm your purchase
 
-Usuario meta: usuarios meta, es cualquiera que utilice la web-app e inggrese con su nombre de usuario. Si no cuenta con uno, puede crearlo con su email.
 
-- **La experiencia de los usuarios una vez logeados consta de:**
-  - visualizar los porductos
-  - filtrar los productos segun genero y tipología
-  - ingresar a los productos para ver sus detalles y disponibilidad.
-  - agregar productos a su orden (esto puede ser desde la página principal o dentro de cada detalle de producto)
-  - ingresar a su orden (carrito)
-  - ingresar código de descuento
-  - agregar y quitar cantidades de productos
-  - eliminar productos de la orden
-  - vaciar la orden (carrito)
+**Customer Journey** 
 
-**Producto**
+![Customer journey](https://user-images.githubusercontent.com/58776923/104585472-594f0000-5664-11eb-9c13-e56545d8e912.jpg)
+
+**Technologies**
+
+![stacks images](https://user-images.githubusercontent.com/58776923/104589704-90281480-566a-11eb-86cb-7e47920e246a.jpg)
+
+**Data structure**
+  
+  Firebase Collection:
+  
+![data estructure](https://user-images.githubusercontent.com/58776923/104592552-a932c480-566e-11eb-970a-6c1f4d1bb08e.jpg)
+
+
+**Product**
+
+  Mobile
+  
+  ![mobile screenshot-1](https://user-images.githubusercontent.com/58776923/104597039-1cd7d000-5675-11eb-9e7d-adb08e028550.jpg)
+
+  Desktop
+  
+  ![desktop screenshots](https://user-images.githubusercontent.com/58776923/104594888-17c55180-5672-11eb-8e47-0f93f2f34322.jpg)
+  
+  
+ 
