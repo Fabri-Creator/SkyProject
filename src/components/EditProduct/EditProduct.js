@@ -6,9 +6,11 @@ import "./EditProduct.scss";
 
 const EditProduct = () => {
   // const dispatch = useDispatch();
+  const { register, handleSubmit, reset, errors } = useForm();
   const admin = useSelector((state) => state.admin);
   const [modal, setModal] = useState(false);
   const [nameModal, setNameModal] = useState(false);
+  const [newProduct, setNewProduct] = useState({});
 
   const handelModalOn = () => {
     setModal(true);
@@ -21,19 +23,43 @@ const EditProduct = () => {
     handelModalOn();
     setNameModal(true);
   };
+  const onSubmit = async (data) => {
+    const { newName } = data;
+    const newData = await changeProductInfo(newName);
+    console.log(newData);
+  };
+
+  const changeProductInfo = async (newInfo) => {
+    return { ...admin.product, Name: newInfo };
+  };
 
   return (
     <div className="edit-main-container">
       {modal && (
         <div className="edit-modal">
-          <i class="far fa-times-circle" onClick={() => handelModalOff()}></i>
+          <i
+            className="far fa-times-circle"
+            onClick={() => handelModalOff()}
+          ></i>
         </div>
       )}
       {admin.product ? (
         <>
           <div className="edit-product-title">Edit Product</div>
           <div className="edit-product-info" onClick={() => handeNameModalOn()}>
-            {nameModal && <div className="edit-product-info-modal"></div>}
+            {nameModal && (
+              <div className="edit-product-info-modal">
+                <h4>Edit product name</h4>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <input
+                    className="input-class"
+                    name="newName"
+                    placeholder="Enter new name"
+                  />
+                  <button>Acept</button>
+                </form>
+              </div>
+            )}
             <p> {`Name: ${admin.product.Name}`}</p>
             <div className="edit-product-info-icon">
               <i class="fas fa-edit"></i>
