@@ -43,6 +43,7 @@
   padding: 0.8rem 0.5rem;
   border-bottom: 1px solid black;
 }
+
 .edit-product-info-modal {
   position: absolute;
   z-index: 110;
@@ -86,7 +87,9 @@
   }
 }
 .edit-product-info-ref {
+  position: relative;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   padding: 0.8rem 0.5rem;
   border-bottom: 1px solid black;

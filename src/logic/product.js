@@ -70,3 +70,33 @@ export async function deleteProduct(id, obj) {
   debugger;
   return db;
 }
+
+export const editProductInfo = (infoType, newInfo, newProductData) => {
+  const newAdmin = { ...newProductData };
+  console.log("type", infoType);
+  console.log("Info", newInfo);
+  switch (infoType) {
+    case "Name":
+      newAdmin.product.Name = newInfo;
+      break;
+    case "Brand":
+      newAdmin.product.Brand = newInfo;
+      break;
+    case "Price":
+      newAdmin.product.Price = newInfo;
+      break;
+    case "Cate":
+      newAdmin.product.Categories = {};
+      const newCatego = {};
+      newInfo.forEach((categories) => {
+        newCatego[categories] = true;
+      });
+      newAdmin.product.Categories = newCatego;
+    case "Size":
+      newAdmin.product.Brand = newInfo;
+      break;
+    default:
+      break;
+  }
+  return newAdmin;
+};

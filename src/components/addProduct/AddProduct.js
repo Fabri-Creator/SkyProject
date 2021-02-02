@@ -24,6 +24,7 @@ const AddProduct = () => {
       productSizeM,
       productSizeL,
     } = data;
+    console.log("data", productName);
     const newProduct = await addProductForm(
       productName,
       productPrice,
